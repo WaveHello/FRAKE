@@ -21,8 +21,8 @@ FRAKE for Anura3D
 #%% Supporting libraries
 import tkinter.filedialog as TK
 import pandas as pd
-import SamplingFunctions as SF
-import GraphFunctions as GF
+from frake import SamplingFunctions as SF
+from frake import GraphFunctions as GF
 import ModifierFunctioins as MF
 import numpy as np
 import os
