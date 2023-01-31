@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="frake",
-    version="0.1.4",
+    version="0.1.5",
     author="Luis E. Zambrano-Cruzatty",
     author_email="luis.zambranocruzatty@maine.edu",
     description="Visualizing tool for Anura3D results",
