@@ -23,7 +23,7 @@ import tkinter.filedialog as TK
 import pandas as pd
 from frake import SamplingFunctions as SF
 from frake import GraphFunctions as GF
-import ModifierFunctioins as MF
+from frake import ModifierFunctioins as MF
 import numpy as np
 import os
 #%% Definition of the ANURA3D class
