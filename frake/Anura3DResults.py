@@ -46,12 +46,11 @@ class Anura3D:
 #GetNames: 'automatic' will assign a name base on the file name and point number
 #          'manual' will promt the user to add a name
 # Returns a list containing all the PAR and SRF files on the folder
-def OpenModels(IsMultiple=False, Import='entire', ID=0, GetNames='automatic'):
+def OpenModels(FolderName, IsMultiple=False, Import='entire', ID=0, GetNames='automatic'):
     ThereAreFiles=False
     if IsMultiple: #For more than a single folder results
         Results=['nada']
     else: #For a single results only
-        FolderName=TK.askdirectory() #promt user to get a folder  
         FileList=[] #Output list to be filled
         for filename in os.listdir(FolderName): #Loop the files on the project
             NameSplit=os.path.splitext(filename)
