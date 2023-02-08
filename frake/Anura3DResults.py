@@ -46,7 +46,8 @@ class Anura3D:
 #GetNames: 'automatic' will assign a name base on the file name and point number
 #          'manual' will promt the user to add a name
 # Returns a list containing all the PAR and SRF files on the folder
-def OpenModels(FolderName, IsMultiple=False, Import='entire', ID=0, GetNames='automatic'):
+def OpenModels(FolderName, IsMultiple, Import, ID, GetNames):
+    #FolderName, IsMultiple=False, Import='entire', ID=0, GetNames='automatic'
     ThereAreFiles=False
     if IsMultiple: #For more than a single folder results
         Results=['nada']
