@@ -213,7 +213,7 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
         if (legendMode):
            PlotName.legend(edgecolor='k',fancybox=False, framealpha=1, shadow=False, borderpad=1)
         if (hold==0):
-           PlotName.show()
+           plt.tight_layout()
 
 #     # naming the x axis
 # plt.xlabel('x [km]')
