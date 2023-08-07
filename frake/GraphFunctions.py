@@ -70,7 +70,7 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             MEDIUM_SIZE = 9
             BIGGER_SIZE = 9
             plt.rc('text', usetex=True)
-            plt.rcParams['text.latex.preamble'] = [r'\usepackage{bm}']
+            plt.rcParams['text.latex.preamble'] = r"\usepackage{bm}"
             plt.rc('font', family='serif')
             plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
             plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
@@ -79,8 +79,8 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             if (linewith==0):
                 lw=1
             else:
@@ -92,7 +92,7 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             MEDIUM_SIZE = 16
             BIGGER_SIZE = 24
             plt.rc('text', usetex=True)
-            plt.rcParams['text.latex.preamble'] = [r'\usepackage{bm}']
+            plt.rcParams['text.latex.preamble'] = r"\usepackage{bm}"
             plt.rc('font', family='serif')
             plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
             plt.rc('axes', titlesize=MEDIUM_SIZE)     # fontsize of the axes title
@@ -101,8 +101,8 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             plt.rc('axes', linewidth=2)
             if (linewith==0):
                 lw=3
@@ -113,7 +113,7 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             MEDIUM_SIZE = 10
             BIGGER_SIZE = 12
             plt.rc('text', usetex=True)
-            plt.rcParams['text.latex.preamble'] = [r'\usepackage{bm}']
+            plt.rcParams['text.latex.preamble'] = r"\usepackage{bm}"
             plt.rc('font', family='serif')
             plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
             plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
@@ -122,8 +122,8 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             if (linewith==0):
                 lw=1
             else:
@@ -133,7 +133,7 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             MEDIUM_SIZE = 10
             BIGGER_SIZE = 12
             plt.rc('text', usetex=True)
-            plt.rcParams['text.latex.preamble'] = [r'\usepackage{bm}']
+            plt.rcParams['text.latex.preamble'] = r"\usepackage{bm}"
             plt.rc('font', family='serif')
             plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
             plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
@@ -142,8 +142,8 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             if (linewith==0):
                 lw=1
             else:
@@ -266,8 +266,8 @@ def PlotID(DATA, IDs, ID, xx, yy, style='Paper', xlabel='default', ylabel='defau
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             lw=1
 
     elif (style=='Slide'):
@@ -284,8 +284,8 @@ def PlotID(DATA, IDs, ID, xx, yy, style='Paper', xlabel='default', ylabel='defau
             plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-            plt.rcParams['figure.dpi'] = 400
-            plt.rcParams["figure.figsize"] = (xsize,ysize)
+            # plt.rcParams['figure.dpi'] = 400
+            # plt.rcParams["figure.figsize"] = (xsize,ysize)
             lw=2
         #else:
 
