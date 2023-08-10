@@ -34,7 +34,11 @@ class Anura3D:
         self.FileList=FileList
         self.IDs=IDs
         self.DATA=DATA
-        
+    def __str__(self):
+        return "Project: {}\n\
+                path: {}\n\
+                FileList: {}\n\
+                IDs: {}\n"
         
 #%% Open Models function
 #This function allows python to know the folder containing a set of results from
