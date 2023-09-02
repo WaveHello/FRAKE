@@ -23,7 +23,7 @@ import tkinter.filedialog as TK
 import pandas as pd
 from frake import SamplingFunctions as SF
 from frake import GraphFunctions as GF
-from frake import ModifierFunctioins as MF
+from frake import ModifierFunctions as MF
 import numpy as np
 import os
 #%% Definition of the ANURA3D class
@@ -35,10 +35,10 @@ class Anura3D:
         self.IDs=IDs
         self.DATA=DATA
     def __str__(self):
-        return "Project: {}\n\
+        print( "Project: {}\n\
                 path: {}\n\
                 FileList: {}\n\
-                IDs: {}\n"
+                IDs: {}\n".format(self.project, self.path, self.FileList, self.IDs))
         
 #%% Open Models function
 #This function allows python to know the folder containing a set of results from
@@ -79,7 +79,7 @@ def OpenModels(FolderName, IsMultiple, Import, ID, GetNames):
                 for i in FileList: #Loop Filelists an import files
                     a=a+1 
                     FullName="{}/{}".format(FolderName, i[0])
-                    data = pd.read_table(FullName, sep='\s+')
+                    data = pd.read_table(FullName, sep='\s+', dtype = float)
                     if (a==1) :
                             DATA_PAR=[data]
                     else:
@@ -107,7 +107,7 @@ def OpenModels(FolderName, IsMultiple, Import, ID, GetNames):
             elif (Import=='single'):
                 if (isinstance(ID,str)):#ID is entered as string
                     FullName="{}/{}".format(FolderName, ID)
-                    data = pd.read_table(FullName, sep='\s+')
+                    data = pd.read_table(FullName, sep='\s+', dtype = float)
                     DATA_PAR=[data]
                     if (GetNames=='manual'):
                         prompt="ID for file {} : ".format(ID)
@@ -123,7 +123,7 @@ def OpenModels(FolderName, IsMultiple, Import, ID, GetNames):
                
                 else:# ID is a number
                     FullName="{}/{}".format(FolderName, FileList[ID])
-                    data = pd.read_table(FullName, sep='\s+')
+                    data = pd.read_table(FullName, sep='\s+', dtype = float)
                     DATA_PAR=[data]
                     if (GetNames=='manual'):
                         prompt="ID for file {} : ".format(FileList[ID])

@@ -40,7 +40,7 @@ import seaborn as sns
 
 def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default', xsize=3, ysize=3, mode='-', hold=0 \
             , palete='Normal', legendMode=True, lims=[0,0,0,0,0], varst=0, PlotName='default', sample_span=1\
-               , linewith=0, markers=0, makersize=0):
+               , linewith=0, markers=0, makersize=0, data_selection = [0, -1, 0, -1]):
 
     if (xlabel=='default'):
         xlabel=xx
@@ -176,10 +176,10 @@ def PlotAll(DATA, IDs, xx, yy, style='Paper', xlabel='default', ylabel='default'
                 aux_mode= '%s%s' %(mode, markers[a-1])
             if (PlotName=='default'):
 
-                plt.plot(Frame[xx][::sample_span],Frame[yy][::sample_span], aux_mode, label=IDs[a-1],\
+                plt.plot(Frame[xx][data_selection[0]:data_selection[1]:sample_span],Frame[yy][data_selection[2]:data_selection[3]:sample_span], aux_mode, label=IDs[a-1],\
                          linewidth=lw,color=Pt[a-1])
             else:
-                PlotName.plot(Frame[xx][::sample_span],Frame[yy][::sample_span], aux_mode, label=IDs[a-1],\
+                PlotName.plot(Frame[xx][data_selection[0]:data_selection[1]:sample_span],Frame[yy][data_selection[2]:data_selection[3]:sample_span], aux_mode, label=IDs[a-1],\
                               linewidth=lw,color=Pt[a-1])
 
     #plt.xlabel(xlabel)
