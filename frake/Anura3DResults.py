@@ -123,7 +123,11 @@ def OpenModels(FolderName, IsMultiple, Import, ID, GetNames):
                
                 else:# ID is a number
                     FullName="{}/{}".format(FolderName, FileList[ID])
-                    data = pd.read_table(FullName, sep='\s+', dtype = float)
+                    data = pd.read_table(FullName, sep='\s+', error_bad_lines = False, warn_bad_lines = True, dtype = float)
+                    
+                    # Replace problematic values with zero
+                    data = data.apply(pd.to_numeric, errors='coerce').fillna(0)
+
                     DATA_PAR=[data]
                     if (GetNames=='manual'):
                         prompt="ID for file {} : ".format(FileList[ID])
